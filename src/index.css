@@ -66,3 +66,9 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+input {
+  border-radius: 4px;
+  padding: 8px;
+  border-style: none;
+}

@@ -16,6 +16,8 @@ function App() {
             <input type="number" placeholder='Insira o seu peso' required onBlur={(e) => setPeso(e.target.value)}/>
 
             <IMCCalculado altura={altura} peso={peso} ></IMCCalculado>
+
+            <footer>&#169; Nicolas - EBAC - 2024</footer>
         </>
     )
 }
