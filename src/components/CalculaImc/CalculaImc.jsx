@@ -44,14 +44,14 @@ const IMCCalculado = ({ altura, peso }) => {
                     <h2>Seu IMC é: {imc}</h2>
                     <ul>
                         {tabelaImc.map(({ classificacao, cor, limite }) => (
-                                <li key={limite} className={cor}>
-                                    <p>
-                                        Se seu IMC é ≥ {limite}
-                                    </p>
-                                    <p>
-                                        {classificacao}
-                                    </p>
-                                </li>
+                            <li key={limite} className={cor}>
+                                <p>
+                                    Se seu IMC é ≥ {limite}
+                                </p>
+                                <p>
+                                    {classificacao}
+                                </p>
+                            </li>
                         ))}
                     </ul>
                 </>
