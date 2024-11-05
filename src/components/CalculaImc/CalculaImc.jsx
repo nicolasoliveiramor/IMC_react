@@ -9,8 +9,8 @@ const IMCCalculado = ({ altura, peso }) => {
     }
 
     const calculaIMC = () => {
-        const alturaEmCm = parseInt(altura)
-        const pesoEmKg = parseInt(peso)
+        const alturaEmCm = parseInt(altura.replace(',', '.').trim())
+        const pesoEmKg = parseInt(peso.replace(',', '.').trim())
 
         if (isNaN(alturaEmCm) || isNaN(pesoEmKg) || alturaEmCm <= 0 || pesoEmKg <= 0) {
             return null
@@ -18,7 +18,13 @@ const IMCCalculado = ({ altura, peso }) => {
 
         const alturaEmMetros = alturaEmCm / 100
         const imc = pesoEmKg / (alturaEmMetros * alturaEmMetros)
-        return imc.toFixed(2)
+
+        if (imc >= 50) {
+            return `Erro! Coloque um valor em centímetros!`
+        } else {
+            return imc.toFixed(1);
+        }
+
     }
 
     const tabelaImc = [
@@ -35,26 +41,27 @@ const IMCCalculado = ({ altura, peso }) => {
 
     return (
         <>
-            {erro &&
-                <h2>{erro}</h2>
-            }
-
-            {imc && (
-                <>
-                    <h2>Seu IMC é: {imc}</h2>
-                    <ul>
-                        {tabelaImc.map(({ classificacao, cor, limite }) => (
-                            <li key={limite} className={cor}>
-                                <p>
-                                    Se seu IMC é ≥ {limite}
-                                </p>
-                                <p>
-                                    {classificacao}
-                                </p>
-                            </li>
-                        ))}
-                    </ul>
-                </>
+            {erro && <h2>{erro}</h2>}
+            {typeof imc === 'string' && imc.includes('Erro') ? (
+                <h2>{imc}</h2>
+            ) : (
+                imc && (
+                    <>
+                        <h2>Seu IMC é: {imc}</h2>
+                        <ul>
+                            {tabelaImc.map(({ classificacao, cor, limite }) => (
+                                <li key={limite} className={cor}>
+                                    <p>
+                                        Se seu IMC é ≥ {limite}
+                                    </p>
+                                    <p>
+                                        {classificacao}
+                                    </p>
+                                </li>
+                            ))}
+                        </ul>
+                    </>
+                )
             )}
         </>
     )
