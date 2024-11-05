@@ -1,0 +1,44 @@
+.baixoPeso {
+    background-color: rgb(0, 50, 150); /* Ou a cor desejada */
+    color: #fff; /* Texto em uma cor escura para contraste */
+}
+
+.pesoNormal {
+    background-color: rgb(0, 150, 200);
+    color: #fff;
+}
+
+.sobrepeso {
+    background-color: rgb(255, 0, 0);
+    color: #fff;
+}
+
+.obesidadeI {
+    background-color: rgb(175, 0, 0); /* Laranja */
+    color: #fff;
+}
+
+.obesidadeII {
+    background-color: rgb(175, 0, 100);
+    color: #fff;
+}
+
+.obesidadeIII {
+    background-color: rgb(250, 0, 100); /* Roxo */
+    color: #fff;
+}
+
+ul {
+    margin: 3em 0;
+    list-style: none;
+}
+
+ul li {
+    padding:  8px;
+    margin: 1em 0;
+    border-radius: 8px;
+}
+
+ul li p {
+    font-weight: 600;
+}

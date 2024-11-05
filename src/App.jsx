@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import IMCCalculado from './components/CalculaImc'
+import IMCCalculado from './components/CalculaImc/CalculaImc'
 
 import './App.css'
 
@@ -12,8 +12,8 @@ function App() {
         <>
             <h1>Calcule seu IMC!</h1>
 
-            <input type="number" placeholder='Insira a sua altura' required onBlur={(e) => setAltura(e.target.value)}/>
-            <input type="number" placeholder='Insira o seu peso' required onBlur={(e) => setPeso(e.target.value)}/>
+            <input type="number" placeholder='Insira a sua altura em cm' required onBlur={(e) => setAltura(e.target.value)}/>
+            <input type="number" placeholder='Insira o seu peso em kg' required onBlur={(e) => setPeso(e.target.value)}/>
 
             <IMCCalculado altura={altura} peso={peso} ></IMCCalculado>
 
