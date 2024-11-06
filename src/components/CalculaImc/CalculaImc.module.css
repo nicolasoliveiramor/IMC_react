@@ -1,32 +1,33 @@
 .baixoPeso {
-    background-color: rgb(0, 50, 150); /* Ou a cor desejada */
-    color: #fff; /* Texto em uma cor escura para contraste */
+    background-color: #4C92C3; /* Azul claro */
+    color: #fff;
 }
 
 .pesoNormal {
-    background-color: rgb(0, 150, 200);
+    background-color: #4CAF50; /* Verde */
     color: #fff;
 }
 
 .sobrepeso {
-    background-color: rgb(255, 0, 0);
+    background-color: #FFB74D; /* Laranja claro */
     color: #fff;
 }
 
 .obesidadeI {
-    background-color: rgb(175, 0, 0); /* Laranja */
+    background-color: #FF8A65; /* Laranja intenso */
     color: #fff;
 }
 
 .obesidadeII {
-    background-color: rgb(175, 0, 100);
+    background-color: #F4511E; /* Vermelho alaranjado */
     color: #fff;
 }
 
 .obesidadeIII {
-    background-color: rgb(250, 0, 100); /* Roxo */
+    background-color: #D32F2F; /* Vermelho escuro */
     color: #fff;
 }
+
 
 ul {
     list-style: none;
@@ -43,4 +44,5 @@ ul li p {
     padding: 0.5em;
     text-align: center;
     font-weight: 600;
+    text-shadow: 1px 1.5px 1.5px black;
 }
